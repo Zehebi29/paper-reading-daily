@@ -1,5 +1,6 @@
 | 日期 | 论文 | 解读 |
 |:----:|:----|:----:|
+|| 2026-05-26 | [SkillOpt: Executive Strategy for Self-Evolving Agent Skills](https://arxiv.org/abs/2605.23904) | [📝](papers/2026-05-26-skillopt/) |
 || 2026-05-25 | [Agent Q-Mix: Selecting the Right Action for LLM Multi-Agent Systems through Reinforcement Learning](https://arxiv.org/abs/2604.00344) | [📝](papers/2026-05-25-agent-q-mix/) |
 || 2026-05-24 | [RELEX: You Only Need Minimal RLVR Training: Extrapolating LLMs via Rank-1 Trajectories](https://arxiv.org/abs/2605.21468) | [📝](papers/2026-05-24-relex/) |
 | 2026-05-21 | [CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning](https://arxiv.org/abs/2605.20075) | [📝](papers/2026-05-21-copt/) |
