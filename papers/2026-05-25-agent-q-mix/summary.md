@@ -1,53 +1,53 @@
-# Agent Q-Mix: Selecting the Right Action for LLM Multi-Agent Systems through Reinforcement Learning
+# Agent Q-Mix：通过强化学习为LLM多Agent系统选择正确行动
 
-**arXiv**: 2604.00344 | **GitHub**: https://github.com/ericjiang18/Agent-Q-Mix | **Institution**: Individual/Independent Research
+**arXiv**: 2604.00344 | **GitHub**: https://github.com/ericjiang18/Agent-Q-Mix | **机构**: 独立研究
 
 ---
 
-## One-Sentence Summary
+## 一句话总结
 
-Agent Q-Mix uses QMIX multi-agent reinforcement learning to learn optimal communication topologies for LLM multi-agent systems, achieving 72.73% average accuracy across 7 benchmarks, outperforming AutoGen by 4.13 points while using fewer tokens.
+Agent Q-Mix 用 QMIX 多智能体强化学习为 LLM 多Agent系统学习最优通信拓扑，在 7 个 benchmark 上平均准确率 72.73%，超过 AutoGen 4.13 个百分点，且 token 消耗更少。
 
-## Problem Background
+## 问题背景
 
-In LLM multi-agent systems, the communication topology (who talks to whom) directly affects collaboration quality. Existing methods either use static topologies (fully connected, chain) or centralized topology generators, preventing individual agents from adapting their communication behavior based on their local state and task difficulty.
+在 LLM 多Agent系统中，通信拓扑（谁和谁说话）直接影响协作质量。现有方法要么使用静态拓扑（全连接、链式），要么使用集中式拓扑生成器，无法让每个 Agent 根据自己的局部状态和任务难度自适应调整通信行为。
 
-## Core Method
+## 核心方法
 
-1. **Communication action space**: Each agent chooses from 6 discrete actions - solo_process (work independently), broadcast_all (broadcast), selective_query (targeted query), aggregate_refine (gather and refine), execute_verify (execute and verify), debate_check (adversarial debate) - collectively determining the round-wise communication graph structure.
-2. **Topology-aware Q-Network**: GNN (2 layers, hidden 128) encodes the current communication graph, GRU (hidden 128) models temporal dependencies, MLP outputs per-action Q-values. All agents share network parameters.
-3. **QMIX monotonic value factorization**: Enables CTDE (centralized training, decentralized execution), ensuring each agent can independently select argmax actions without conflict. Reward combines accuracy (positive) with normalized token usage penalty.
-4. **Multi-round execution**: Each round: select communication actions -> construct adjacency matrix -> execute in topological order -> aggregate. 3 rounds for math, 2 for coding/reasoning.
+1. **通信动作空间**：每个 Agent 从 6 个离散动作中选择——solo_process（独立工作）、broadcast_all（广播）、selective_query（定向查询）、aggregate_refine（聚合提炼）、execute_verify（执行验证）、debate_check（辩论检查）——共同决定每轮的通信图结构。
+2. **拓扑感知 Q-Network**：GNN（2层，hidden 128）编码当前通信图，GRU（hidden 128）建模时间依赖，MLP 输出每个动作的 Q 值。所有 Agent 共享网络参数。
+3. **QMIX 单调值分解**：实现 CTDE（集中训练、分散执行），确保每个 Agent 能独立选择最优动作。奖励函数结合准确率（正向）与 token 用量惩罚（归一化）。
+4. **多轮执行**：每轮：选择通信动作 → 构建邻接矩阵 → 按拓扑顺序执行 → 聚合。数学任务 3 轮，编程/推理任务 2 轮。
 
-## Key Results
+## 关键结果
 
-On GPT-OSS:120B, Agent Q-Mix achieves **72.73% avg accuracy** vs AutoGen 68.60% and single-agent 48.73%. On Humanity's Last Exam (HLE), achieves 20.8% vs Microsoft Agent Framework 19.2%.
+在 GPT-OSS:120B 上，Agent Q-Mix 平均准确率 **72.73%**，AutoGen 68.60%，单 Agent 48.73%。在 Humanity's Last Exam (HLE) 上达到 20.8%，微软 Agent Framework 为 19.2%。
 
-Full results table (7 benchmarks):
+完整结果表（7 个 benchmark）：
 
-| Model | LiveCode | HumanEval | MMLU-Pro | AIME25 | AIME26 | HMMT | Beyond | **Avg** |
-|-------|----------|-----------|----------|--------|--------|------|--------|---------|
+| 模型 | LiveCode | HumanEval | MMLU-Pro | AIME25 | AIME26 | HMMT | Beyond | **平均** |
+|------|----------|-----------|----------|--------|--------|------|--------|---------|
 | Single-agent | 88.75 | 90.04 | 74.29 | 23.33 | 20.00 | 26.67 | 18.00 | **48.73** |
 | AutoGen | 100.00 | 95.12 | 81.43 | 53.33 | 70.00 | 43.33 | 37.00 | **68.60** |
 | **Agent Q-Mix** | **100.00** | **97.56** | **92.86** | **63.33** | 60.00 | **53.33** | **42.00** | **72.73** |
 
-## Highlights
+## 亮点
 
-1. Action space design is elegant: 6 actions cover almost all common communication patterns with clear graph-theoretic semantics, making it highly interpretable.
-2. CTDE + QMIX is a natural fit: monotonic value factorization guarantees optimal decentralized execution, and the GNN encoder lets agents perceive the current communication graph structure.
-3. Training efficiency is impressive: only 15 examples per domain, 50 episodes, 30-60 minutes on a single CPU.
-4. Strong robustness: topology automatically adapts when agents fail, outperforming other frameworks in fault scenarios.
+1. 动作空间设计优雅：6 个动作覆盖几乎所有常见通信模式，具有清晰的图论语义，可解释性强。
+2. CTDE + QMIX 天然适配：单调值分解保证最优分散执行，GNN 编码器让 Agent 感知当前通信图结构。
+3. 训练效率惊人：每个领域仅 15 个样本，50 个 episode，单 CPU 训练 30-60 分钟。
+4. 鲁棒性强：Agent 失效时拓扑自动自适应调整，故障场景下优于其他框架。
 
-## Limitations
+## 局限
 
-1. Only controls topology structure, not message content itself - may miss content-level collaboration gains.
-2. Extremely small training data (15 examples + 50 episodes) may lead to local optima in complex scenarios.
-3. Does not fine-tune LLM parameters, so performance is bounded by the base model capability.
+1. 只控制拓扑结构，不控制消息内容本身——可能错过内容层面的协作收益。
+2. 训练数据极少（15 样本 + 50 轮），复杂场景可能陷入局部最优。
+3. 不微调 LLM 参数，因此性能受基座模型能力上限约束。
 
-## Personal Assessment
+## 个人评价
 
-What impresses me most is the clean perspective shift of reframing communication topology selection as a MARL problem. Existing multi-agent systems mostly rely on fixed topologies or heuristic rules. Agent Q-Mix lets each agent "decide for itself who to talk to," significantly outperforming commercial frameworks like AutoGen on math reasoning and coding tasks.
+最让我印象深刻的，是视角转换的简洁性——把通信拓扑选择重新定义为 MARL 问题。现有的多Agent系统大多依赖固定拓扑或启发式规则。Agent Q-Mix 让每个 Agent「自己决定该跟谁说话」，在数学推理和编程任务上显著超过 AutoGen 等商业级框架。
 
-For GWS experiments, if we eventually work on multi-robot weld path planning collaboration, this adaptive topology idea is highly inspiring - each welding robot could autonomously decide whether to plan independently, exchange path information, or request aggregation. However, the paper only validates text-based communication between LLMs; applying it to real robot collaboration would require solving perception-layer and physical-layer communication challenges.
+对于 GWS 实验，如果将来做多机器人焊缝路径规划协作，这种自适应拓扑的思路很有启发——每个焊接机器人可以自主决定是独立规划、交换路径信息还是请求聚合。不过论文只在 LLM 之间的文本通信上验证了效果，应用到真实机器人协作还需要解决感知层和物理层的通信问题。
 
-Also noteworthy is the training efficiency: 15 examples + short training + strong results - a pattern worth learning for tight submission schedules.
+另外值得注意的是训练效率：15 个样本 + 短训练 + 强效果——这个模式在赶论文 ddI 时值得学习。

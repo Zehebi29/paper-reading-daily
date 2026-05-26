@@ -1,4 +1,4 @@
-# STAR-PolyaMath: Multi-Agent Reasoning under Persistent Meta-Strategic Supervision
+# STAR-PolyaMath：持续元策略监督下的多Agent推理
 
 **arXiv**: 2605.19338 | **GitHub**: https://github.com/Julius-Woo/STAR-PolyaMath | **机构**: Wu, Zhang, Liu et al.
 

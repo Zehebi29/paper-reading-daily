@@ -1,20 +1,20 @@
-# Self-Distilled Agentic Reinforcement Learning (SDAR)
+# SDAR：自蒸馏门控Agent强化学习
 
 > arXiv: 2605.15155v1 | 2026-05-14 | cs.LG / cs.AI / cs.CL
-> Code: https://github.com/ZJU-REAL/SDAR
+> 代码: https://github.com/ZJU-REAL/SDAR
 
-## Problem
+## 问题
 
-RL-trained LLM agents suffer from sparse trajectory-level rewards in multi-turn tasks. On-Policy Self-Distillation (OPSD) adds token-level dense supervision via a teacher model with privileged context, but naively combining GRPO+OPSD causes catastrophic failure in multi-turn agents.
+经过 RL 训练的 LLM Agent 在多轮任务中面临稀疏的轨迹级奖励问题。On-Policy Self-Distillation (OPSD) 通过具有特权上下文的教师模型提供 token 级密集监督，但简单地将 GRPO + OPSD 组合起来会导致多轮 Agent 灾难性失败。
 
-## Method: SDAR = GRPO + Gated OPSD
+## 方法：SDAR = GRPO + 门控 OPSD
 
-1. RL backbone: GRPO as primary optimization objective
-2. OPSD auxiliary: Teacher with privileged context computes token-level log-probability gap
-3. Sigmoid gating (core): Adaptive gate modulates distillation per token. Positive gaps trusted, negative gaps attenuated. Gate detached from gradient flow.
-4. Skill retrieval: UCB bandit or keyword matching from SkillBank
+1. **RL 主干**：GRPO 作为主要优化目标
+2. **OPSD 辅助**：具有特权上下文的教师模型计算 token 级 log-probability 差距
+3. **Sigmoid 门控（核心）**：自适应门控按 token 调节蒸馏强度。正差距信任、负差距衰减。门控从梯度流中分离。
+4. **技能检索**：UCB bandit 或从 SkillBank 关键词匹配
 
-## Results
+## 结果
 
 | Benchmark | vs GRPO |
 |:---|---:|
@@ -23,22 +23,22 @@ RL-trained LLM agents suffer from sparse trajectory-level rewards in multi-turn 
 | WebShop-Acc | +10.2% |
 | WebShop-Reward | +5.2 |
 
-Models: Qwen2.5-3B/7B, Qwen3-1.7B. Open source: github.com/ZJU-REAL/SDAR
+模型：Qwen2.5-3B/7B, Qwen3-1.7B。开源：github.com/ZJU-REAL/SDAR
 
-## Strengths
+## 优势
 
-- Elegant: each token decides its own supervision intensity
-- Asymmetric trust: positive gap = endorsement; negative gap may not be rejection
-- Multi-model validation, code available
-- Gating stabilizes RL training
+- 优雅：每个 token 自己决定自己的监督强度
+- 非对称信任：正差距 = 认可；负差距不一定代表拒绝
+- 多模型验证，代码可用
+- 门控稳定了 RL 训练
 
-## Limitations
+## 局限
 
-- Requires SkillBank and retrieval module
-- Task-dependent privileged context design
-- Text-only environments; no vision/tool-use settings
-- Small models only (1.7B-7B); large-model scaling unknown
+- 需要 SkillBank 和检索模块
+- 依赖于任务的特权上下文设计
+- 仅限文本环境，无视觉/工具使用设置
+- 仅小模型（1.7B-7B），大模型扩展性未知
 
-## Personal Take
+## 个人评价
 
-SDAR is clean: do not let distillation fight RL; use gating to make distillation a supportive coach. The asymmetric trust philosophy could inspire broader agent training paradigms like multi-agent credit assignment.
+SDAR 很干净：不让蒸馏与 RL 对抗，而是用门控让蒸馏成为支持的教练。这种非对称信任理念可能启发更广泛的 Agent 训练范式，比如多Agent 信用分配。

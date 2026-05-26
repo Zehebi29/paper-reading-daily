@@ -1,31 +1,48 @@
-# ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents
+# ToolCUA：GUI工具路径最优编排，让Computer Use Agent更聪明
 
 > arXiv:2605.12481v1 · 2026-05-12 · [GitHub](https://github.com/X-PLUG/ToolCUA)
 
+---
+
 ## 问题
-计算机使用Agent面对混合动作空间（GUI操作 vs 工具调用）时，出现两种失效模式：
-- **工具使用不足**（Tool Underuse）：几乎不调工具，纯GUI操作，效率低
-- **工具滥用**（Tool Overuse）：过度调用工具，反而损害准确率
+
+计算机使用 Agent 面对混合动作空间（GUI 操作 vs 工具调用）时，出现两种失效模式：
+- **工具使用不足**：几乎不调工具，纯 GUI 操作，效率低
+- **工具滥用**：过度调用工具，反而损害准确率
 
 ## 方法
+
 三阶段训练范式：
 
-1. **交错GUI-Tool轨迹生成**：将已有纯GUI轨迹（1万条）转化为GUI+工具混合轨迹，共生成18万步
-2. **工具引导的GUI RFT**：在关键决策点（GUI↔Tool切换边界）上用GRPO做强化学习
-3. **在线Agentic RL**：用路径效率奖励（Tool-Efficient Path Reward）训练，鼓励最优动作路径
+1. **交错 GUI-Tool 轨迹生成**：将已有纯 GUI 轨迹（1 万条）转化为 GUI+工具混合轨迹，共生成 18 万步
+2. **工具引导的 GUI RFT**：在关键决策点（GUI↔Tool 切换边界）上用 GRPO 做强化学习
+3. **在线 Agentic RL**：用路径效率奖励（Tool-Efficient Path Reward）训练，鼓励最优动作路径
 
-核心奖励函数：`R = R_fmt + R_acc + λ·R_tool + β·R_length`
+核心奖励函数：R = R_fmt + R_acc + λ·R_tool + β·R_length
 
 ## 结果
 
 | 指标 | 数值 |
 |:----|:----:|
-| OSWorld-MCP准确率 | **46.85%**（+66% vs 基线） |
+| OSWorld-MCP 准确率 | **46.85%**（+66% vs 基线） |
 | 参数量 | 8B |
 | 平均完成步数 | **14.9**（所有模型中最少） |
-| 对比Claude-4.5-Sonnet | 仅差1.5%（397B vs 8B） |
+| 对比 Claude-4.5-Sonnet | 仅差 1.5%（397B vs 8B） |
 
-## 个人判断
-这篇论文的优势在于：不靠更大的模型，而是靠更聪明的训练策略解决了Agent行为优化问题。三阶段设计层层递进，每个阶段解决一个具体痛点。开源代码也降低了复现门槛。
+## 亮点
+
+1. 三阶段设计层层递进，每个阶段解决一个具体痛点
+2. 不靠更大模型，靠更聪明的训练策略解决 Agent 行为优化问题
+3. 8B 模型达到接近 397B Claude-4.5-Sonnet 的效果，效率极高
+
+## 局限
+
+1. 仅在桌面 GUI 环境验证，移动端和 web 端未测试
+2. 轨迹转换依赖已有纯 GUI 数据，对新类型 GUI 泛化能力未知
+3. 奖励函数设计需要领域知识，调参成本较高
+
+## 个人评价
+
+这篇论文最让我印象深刻的是它不追求更大模型，而是用三阶段训练策略让 8B 模型逼近 397B 模型的效果。对于 GWS 项目也有启发：如果焊缝路径规划也能设计类似的层级训练策略（先仿真→再迁移→再在线优化），也许小模型也能出大效果。代码已开源，值得深入看看实现细节。
 
 **关键词**：GUI Agent, RL Training, Hybrid Action Space, Tool Orchestration

@@ -1,71 +1,66 @@
-# RELEX: Just 15% RLVR Training Enough for Full Performance
+# RELEX：只需 15% RLVR 训练步数，就达到完整训练性能
 
-**arXiv**: 2605.21468 | **GitHub**: https://github.com/weizhepei/RELEX | **Affiliation**: UVa & Washington University in St. Louis
+**arXiv**: 2605.21468 | **GitHub**: https://github.com/weizhepei/RELEX | **机构**: UVa & Washington University in St. Louis
 
 ---
 
-## One-Sentence Summary
+## 一句话总结
 
-RELEX discovers that RLVR weight trajectories are naturally rank-1 and linearly predictable.
-By observing only the first 15% of training steps, it extrapolates to full training performance,
-matching or exceeding full RLVR training on three Qwen models.
+RELEX 发现 RLVR 权重轨迹天然是 rank-1 且线性可预测的。只需观察前 15% 的训练步，就能外推到完整训练性能，在三个 Qwen 模型上匹配甚至超过完整 RLVR 训练的效果。
 
-## Background
+## 背景
 
-RLVR has become the dominant paradigm for improving LLM reasoning (e.g., DeepSeek-R1 GRPO),
-but full training is computationally expensive. The geometry of training dynamics was previously underexplored.
+RLVR 已成为提升 LLM 推理能力的主流范式（如 DeepSeek-R1 的 GRPO），但完整训练的计算成本很高。训练动态的几何结构此前未被充分探索。
 
-## Method
+## 方法
 
-- Finding 1: RLVR weight trajectories are low-rank -- per-tensor deltas approximated by rank-1 SVD
-- Finding 2: Rank-1 coefficients evolve near-linearly (R^2 > 0.98)
-- RELEX algorithm: deltas from early checkpoints -> SVD rank-1 subspace -> linear fit -> extrapolate
-- Zero training cost: closed-form truncated SVD + two-parameter least-squares fit
+- **发现 1**：RLVR 权重轨迹是低秩的——每个张量的 delta 可以用 rank-1 SVD 近似
+- **发现 2**：Rank-1 系数接近线性演化（R² > 0.98）
+- **RELEX 算法**：早期 checkpoint 的 delta → SVD rank-1 子空间 → 线性拟合 → 外推
+- **零训练成本**：闭式截断 SVD + 两参数最小二乘拟合
 
-## Key Results
+## 关键结果
 
-### In-domain MATH (15-20% observation, extrapolate to 500 steps)
+### In-domain MATH（观察 15-20%，外推到 500 步）
 
-| Model | Base | Full RLVR | RELEX |
-|-------|:----:|:---------:|:-----:|
+| 模型 | Base | Full RLVR | RELEX |
+|------|:----:|:---------:|:-----:|
 | Qwen2.5-Math-1.5B | 48.2 | 71.5 | **71.6** |
 | Qwen3-4B-Base | 64.0 | 85.5 | **85.6** |
 | Qwen3-8B-Base | 73.9 | 88.5 | 87.4 |
 
-### OOD Benchmarks (average of 5)
+### OOD 基准（5 个 benchmark 平均）
 
-| Model | Full RLVR | RELEX |
-|-------|:---------:|:-----:|
+| 模型 | Full RLVR | RELEX |
+|------|:---------:|:-----:|
 | Qwen2.5-Math-1.5B | 28.4 | **30.0** |
 | Qwen3-4B-Base | 42.3 | **43.0** |
 | Qwen3-8B-Base | 47.1 | 46.2 |
 
-### vs Baselines (15-20% cost)
+### vs 基线（15-20% 成本）
 
-RELEX outperforms ExPO, AlphaRL, Logits Extrapolation, and Weight Extrapolation.
+RELEX 优于 ExPO、AlphaRL、Logits Extrapolation 和 Weight Extrapolation。
 
-### Extrapolation Limit
+### 外推极限
 
-- Observing 50 steps, extrapolates to 1000 steps with continued improvement
-- Stable up to 10-20x beyond observation window
+- 观察 50 步，可外推到 1000 步并持续改进
+- 超过观察窗口 10-20 倍仍保持稳定
 
-## Highlights
+## 亮点
 
-- Extreme simplicity: rank-1 + linear fit suffices; rank-5/10 offers no gain
-- Valuable theoretical insight: RLVR optimization follows straight-line trajectory
-- Practical: open-source code + HuggingFace checkpoints released
-- Denoising effect: rank-1 projection discards optimization noise
+- 极致的简洁性：rank-1 + 线性拟合就足够了；rank-5/10 没有额外收益
+- 有价值的理论洞察：RLVR 优化沿着直线轨迹进行
+- 实用性：开源代码 + HuggingFace checkpoint 已发布
+- 去噪效果：rank-1 投影丢弃了优化噪声
 
-## Limitations
+## 局限
 
-- Only validated on math reasoning tasks (MATH/AIME/AMC), not code, agent, or general chat
-- Requires existing RLVR training trajectory as starting point
-- Observation window selection is sensitive
+- 仅在数学推理任务（MATH/AIME/AMC）上验证，未涉及代码、Agent 或通用对话
+- 需要已有 RLVR 训练轨迹作为起点
+- 观察窗口的选择较为敏感
 
-## Personal Take
+## 个人评价
 
-The counter-intuitive finding is the most exciting part: everyone assumes RLVR pushes models
-into complex high-dimensional spaces, but the trajectory is nearly a straight line. This could
-mean Agent RL training (like GWS path planning RL) might have similar low-rank structure.
+最令人兴奋的是反直觉的发现：大家都认为 RLVR 把模型推向了复杂的高维空间，但实际轨迹几乎是一条直线。这可能意味着 Agent RL 训练（比如 GWS 路径规划 RL）也有类似的低秩结构。
 
-The denoising perspective is also interesting for GWS reward curve analysis.
+去噪视角对 GWS 奖励曲线分析也很有启发。

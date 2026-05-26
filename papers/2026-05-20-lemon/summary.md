@@ -1,67 +1,52 @@
-# LEMON: Learning Executable Multi-Agent Orchestration via Counterfactual RL
+# LEMON：通过反事实RL学习可执行多Agent编排
 
-**arXiv**: 2605.14483 | **Code**: https://anonymous.4open.science/r/LEMON-B23C | **Org**: Anonymous (NeurIPS 2026 under review)
+**arXiv**: 2605.14483 | **代码**: https://anonymous.4open.science/r/LEMON-B23C | **机构**: Anonymous（NeurIPS 2026 审稿中）
 
 ---
 
 ## TL;DR
 
-LEMON trains an LLM orchestrator to output a complete YAML spec (roles + capacities + dependencies) for multi-agent systems. Key innovation: localized counterfactual credit assignment -- mutate one field, execute counterfactual, backprop reward delta only to edited token spans. 90.72% avg accuracy across 6 benchmarks, SOTA among multi-agent orchestration methods.
+LEMON 训练一个 LLM orchestrator 输出完整的 YAML 规格（角色 + 容量 + 依赖关系）来构建多Agent系统。关键创新：局部化反事实信用分配——突变一个字段，执行反事实，只向被编辑的 token 跨度回传奖励差值。6 个 benchmark 平均准确率 90.72%，多Agent编排方法中 SOTA。
 
-## Problem
+## 问题
 
-Multi-agent LLM systems depend on orchestration design: which roles, what model tier per agent, how they connect. Existing methods optimize these separately (topology OR workflow OR routing) with sparse end-to-end rewards that cannot pinpoint which local decision caused success/failure.
+多Agent LLM 系统的性能依赖于编排设计：选择什么角色、每个 Agent 用什么模型层级、它们之间如何连接。现有方法对此进行分离优化（拓扑 OR 工作流 OR 路由），且端到端奖励稀疏，无法定位哪个局部决策导致了成功或失败。
 
-## Method
+## 方法
 
-1. Compositional orchestration generation: Orchestrator (Qwen2.5-7B) outputs YAML with agent roles, capacity levels (small/medium/large = 7B/14B/32B), and dependency refs. Compiled to DAG.
+1. **组合式编排生成**：Orchestrator（Qwen2.5-7B）输出 YAML，包含 Agent 角色、容量级别（small/medium/large = 7B/14B/32B）和依赖引用。编译为 DAG。
+2. **SFT 预热**：教师模型生成有效的 YAML 示例做监督预训练，避免 RL 中产生无效展开。
+3. **编排级 GRPO**：奖励 = 任务正确率 + token 效率奖励 - 图复杂度惩罚。稀疏信用。
+4. **局部反事实信用分配（核心）**：三种突变类型——删除依赖、回滚角色到基础版、降级容量。执行反事实规格，计算奖励差值，只回传到被编辑的 token 跨度，而非整个序列。
+5. **自适应突变采样**：基于历史奖励对比，在线平衡三种突变类型的采样比例。
 
-2. SFT warmup: Teacher model generates valid YAML examples for supervised pretraining to avoid invalid RL rollouts.
+## 结果
 
-3. Orchestration-level GRPO: Reward = task correctness + token efficiency bonus - graph complexity penalty. Sparse credit.
+六个 benchmark 平均准确率：**90.72%**。优于单 Agent（Vanilla/CoT/SC）、固定拓扑 MAS（链式/树状/全连接）、自适应工作流（AFlow）和拓扑设计方法（G-Designer、AgentPrune 等）。在准确率-效率 Pareto 前沿上最优。
 
-4. Localized counterfactual credit (core): Three mutation types -- delete dependency, rollback role to base, downgrade capacity. Execute counterfactual spec, compute reward delta, backprop ONLY to edited token spans. Not the whole sequence.
+消融实验：去掉 SFT → RL 早期大量无效 rollout；去掉局部 CF → 性能大幅下降；执行缓存降低反事实开销。
 
-5. Adaptive mutation sampling: Online balance of three mutation types based on historical reward contrast.
+## 优势
 
-## Results
+- 信用粒度：从轨迹级到跨度级，直接解决了多Agent RL 的信用分配瓶颈
+- 统一规格：角色 + 容量 + 依赖联合优化，而非顺序优化
+- 实用性：SFT + RL 1500 步，group size 4，计算量可控
+- 异构 worker：7B/14B/32B 混合，贴近真实部署场景
+- 三种突变类型设计精巧，直接映射到编排的三个维度
 
-Six benchmarks:
+## 局限
 
-| Benchmark | Size | Type |
-|:----------|:-----|:-----|
-| MMLU (val) | 1,531 | MCQ reasoning |
-| GSM8K (test) | 1,319 | Grade-school math |
-| AQuA | 254 | Math reasoning |
-| MultiArith | 600 | Multi-step arithmetic |
-| SVAMP | 1,000 | Math word problems |
-| HumanEval | 124 | Code generation |
+- 代码在 anonymous 4open.science（双盲审稿），可复现性未验证
+- benchmark 仅限推理/编程，无工具使用、多轮交互或开放域任务
+- Orchestrator 固定为 Qwen2.5-7B，更强 backbone 未探索
+- 反事实评估使训练成本翻倍（部分由缓存缓解）
+- 静态编排（执行前一次性生成），未探索动态重编排
+- 只训练 orchestrator 不训练 worker：编排+执行联合 RL 未知
 
-Average accuracy: 90.72%. Outperforms single-agent (Vanilla/CoT/SC), fixed-topology MAS (Chain/Tree/Complete), adaptive workflow (AFlow), and topology design methods (G-Designer, AgentPrune, etc.). Pareto-optimal on accuracy-token efficiency.
+## 个人评价
 
-Ablations: removing SFT -> many invalid rollouts early in RL; removing local CF -> significant performance drop; execution caching reduces counterfactual overhead.
+LEMON 解决了一个实际的痛点：自动化多Agent系统设计。当前做法是手动调拓扑 + 凭感觉分配角色 + 统一用最强模型 = 又贵又次优。LEMON 的答案是：把编排设计变成一个可微的生成问题，用反事实编辑作为局部化的信用信号。
 
-## Strengths
+三种突变类型（删除依赖 / 回滚角色 / 降级容量）显示出对领域问题的深刻理解——不是随机扰动，而是对编排三大维度的精准手术刀式编辑。
 
-- Credit granularity: from trajectory-level to span-level, directly solving the multi-agent RL credit assignment bottleneck
-- Unified spec: roles + capacities + dependencies co-optimized, not sequential
-- Practical: SFT + RL with 1500 steps, group size 4, manageable compute
-- Heterogeneous workers: 7B/14B/32B mixed, realistic deployment setup
-- Three mutation types are well-designed, directly mapping to orchestration dimensions
-
-## Limitations
-
-- Code on anonymous 4open.science (double-blind), reproducibility unverified
-- Benchmarks are reasoning/coding only; no tool-use, multi-turn interaction, or open-domain tasks
-- Fixed orchestrator backbone (Qwen2.5-7B), stronger backbones unexplored
-- Counterfactual evaluation doubles training cost vs vanilla GRPO (partially mitigated by caching)
-- Static orchestration (generated once before execution), dynamic re-orchestration not explored
-- Only trains orchestrator, not workers: orchestration + execution joint RL unknown
-
-## Personal Take
-
-LEMON tackles a practical pain point: automating multi-agent system design. Current practice is manual topology tuning + gut-feel role assignment + uniform strongest model = expensive and suboptimal. LEMON's answer: make orchestration design a differentiable generation problem with counterfactual edits as localized credit signal.
-
-The three mutation types (delete dependency / rollback role / downgrade capacity) show deep domain understanding -- not random perturbations but surgical edits on the three real orchestration axes.
-
-Open question: if we also fine-tune worker LLMs (not just the orchestrator), could joint "orchestration + execution" RL beat separate training? LEMON trains only the orchestrator, which simplifies but caps potential. Also, LEMON's orchestration is static (generated once pre-execution); dynamic re-orchestration mid-task could be the next breakthrough.
+开放问题：如果同时微调 worker LLM（不只训练 orchestrator），"编排+执行"联合 RL 能否超越分开训练？LEMON 只训练 orchestrator 简化了问题但也限制潜力。另外 LEMON 的编排是静态的（执行前生成一次），任务中的动态重编排可能是下一个突破点。

@@ -1,4 +1,4 @@
-# SkillOpt: Executive Strategy for Self-Evolving Agent Skills
+# SkillOpt：自进化Agent技能的执行策略
 
 **arXiv**: 2605.23904 | **GitHub**: https://aka.ms/SkillOpt | **机构**: Microsoft Research, 上海交通大学, 同济大学, 复旦大学
 

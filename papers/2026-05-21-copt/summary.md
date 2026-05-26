@@ -1,4 +1,4 @@
-# CopT: Contrastive On-Policy Thinking with Continuous Spaces for General and Agentic Reasoning
+# CopT：连续空间中的对比On-Policy思考——通用与Agentic推理
 
 **arXiv**: [2605.20075](https://arxiv.org/abs/2605.20075) | **GitHub**: [sdc17/CopT](https://github.com/sdc17/CopT) | 机构: Georgia Tech
 
