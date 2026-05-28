@@ -1,5 +1,6 @@
 | 日期 | 论文 | 解读 |
 |:----:|:----|:----:|
+| 2026-05-29 | [TRACER: Turn-level Regret Matching with Inner Reinforcement Credit for Cooperative Multi-LLM Reasoning](https://arxiv.org/abs/2605.28699) | [📝](papers/2026-05-29-tracer/summary.md) |
 | 2026-05-28 | [Hera: Learning Long-Horizon Coordination for Device-Cloud Collaborative LLM Agents](https://arxiv.org/abs/2605.24598) | [📝](papers/2026-05-28-hera/summary.md) |
 | 2026-05-27 | [CUA-Gym：可验证训练环境与任务的规模化生成](https://arxiv.org/abs/2605.25624) | [📝](papers/2026-05-27-cua-gym/summary.md) |
 | 2026-05-26 | [SkillOpt：自进化Agent技能的执行策略](https://arxiv.org/abs/2605.23904) | [📝](papers/2026-05-26-skillopt/summary.md) |
