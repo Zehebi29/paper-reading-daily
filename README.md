@@ -1,5 +1,6 @@
 | 日期 | 论文 | 解读 |
 |:----:|:----|:----:|
+| 2026-05-31 | [You Only Align Once: Propagating Cooperative Behaviors in Multi-Agent Systems through Seed Agents](https://arxiv.org/abs/2605.27586) | [📝](papers/2026-05-31-yoao/summary.md) |
 | 2026-05-30 | [SkillsInjector: Dynamic Skill Context Construction for LLM Agents](https://arxiv.org/abs/2605.29794) | [📝](papers/2026-05-30-skills-injector/summary.md) |
 | 2026-05-29 | [TRACER: Turn-level Regret Matching with Inner Reinforcement Credit for Cooperative Multi-LLM Reasoning](https://arxiv.org/abs/2605.28699) | [📝](papers/2026-05-29-tracer/summary.md) |
 | 2026-05-28 | [Hera: Learning Long-Horizon Coordination for Device-Cloud Collaborative LLM Agents](https://arxiv.org/abs/2605.24598) | [📝](papers/2026-05-28-hera/summary.md) |
