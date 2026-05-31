@@ -1,5 +1,6 @@
 | 日期 | 论文 | 解读 |
 |:----:|:----|:----:|
+| 2026-06-01 | [UnityMAS-O: A General RL Optimization Framework for LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2605.26646) | [📝](papers/2026-06-01-unitymas-o/summary.md) |
 | 2026-05-31 | [You Only Align Once: Propagating Cooperative Behaviors in Multi-Agent Systems through Seed Agents](https://arxiv.org/abs/2605.27586) | [📝](papers/2026-05-31-yoao/summary.md) |
 | 2026-05-30 | [SkillsInjector: Dynamic Skill Context Construction for LLM Agents](https://arxiv.org/abs/2605.29794) | [📝](papers/2026-05-30-skills-injector/summary.md) |
 | 2026-05-29 | [TRACER: Turn-level Regret Matching with Inner Reinforcement Credit for Cooperative Multi-LLM Reasoning](https://arxiv.org/abs/2605.28699) | [📝](papers/2026-05-29-tracer/summary.md) |
@@ -14,3 +15,4 @@
 | 2026-05-15 | [ToolCUA: Optimal Orchestration of GUI Tool Paths for Smarter Computer Use Agents](https://arxiv.org/abs/2605.12481) | [📝](papers/2026-05-15-toolcua/summary.md) |
 | 2026-05-17 | [Orchard: Microsoft Open-Source Agent Training Framework, 30B Model SWE-bench 67.5%](https://arxiv.org/abs/2605.15040) | [📝](papers/2026-05-17-orchard-agentic-modeling/summary.md) |
 | 2026-05-18 | [SDAR: Self-Distillation + Gating, Each Token Decides How Much to Listen to the Teacher](https://arxiv.org/abs/2605.15155) | [📝](papers/2026-05-18-sdar-self-distilled-agent-rl/summary.md) |
+
