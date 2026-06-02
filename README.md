@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-03 | [SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training](https://arxiv.org/abs/2606.02355) | [📝](papers/2026-06-03-siri/summary.md) |
 | 2026-06-02 | [Skill Reuse as Compression in Agentic RL](https://arxiv.org/abs/2605.31509) | [📝](papers/2026-06-02-reuserl/summary.md) |
 | 2026-06-01 | [UnityMAS-O: A General RL Optimization Framework for LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2605.26646) | [📝](papers/2026-06-01-unitymas-o/summary.md) |
 | 2026-05-31 | [You Only Align Once: Propagating Cooperative Behaviors in Multi-Agent Systems through Seed Agents](https://arxiv.org/abs/2605.27586) | [📝](papers/2026-05-31-yoao/summary.md) |
