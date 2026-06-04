@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-05 | [ExpWeaver: LLM Agents Learn from Experience via Latent RAG](https://arxiv.org/abs/2606.01041) | [📝](papers/2026-06-05-expweaver/summary.md) |
 | 2026-06-04 | [DARTS: Distribution-Aware Active Rollout Trajectory Shaping for Accelerating LLM Reinforcement Learning](https://arxiv.org/abs/2605.30859) | [📝](papers/2026-06-04-darts/summary.md) |
 | 2026-06-03 | [SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training](https://arxiv.org/abs/2606.02355) | [📝](papers/2026-06-03-siri/summary.md) |
 | 2026-06-02 | [Skill Reuse as Compression in Agentic RL](https://arxiv.org/abs/2605.31509) | [📝](papers/2026-06-02-reuserl/summary.md) |
