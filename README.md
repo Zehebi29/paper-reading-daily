@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-08 | [MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery](https://arxiv.org/abs/2606.06473) | [📝](papers/2026-06-08-mlevolve/summary.md) |
 | 2026-06-07 | [AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.04484) | [📝](papers/2026-06-07-agentjet/summary.md) |
 | 2026-06-06 | [When Denser Credit Is Not Enough: Evidence-Calibrated Policy Optimization for Long-Horizon LLM Agent Training](https://arxiv.org/abs/2606.05885) | [📝](papers/2026-06-06-ecpo/summary.md) |
 | 2026-06-05 | [ExpWeaver: LLM Agents Learn from Experience via Latent RAG](https://arxiv.org/abs/2606.01041) | [📝](papers/2026-06-05-expweaver/summary.md) |
