@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-10 | [Claw-R1: A Step-Level Data Middleware System for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.09138) | [📝](papers/2026-06-10-claw-r1/summary.md) |
 | 2026-06-09 | [Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills](https://arxiv.org/abs/2606.07412) | [📝](papers/2026-06-09-socratic-swe/summary.md) |
 | 2026-06-08 | [MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery](https://arxiv.org/abs/2606.06473) | [📝](papers/2026-06-08-mlevolve/summary.md) |
 | 2026-06-07 | [AgentJet: A Flexible Swarm Training Framework for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.04484) | [📝](papers/2026-06-07-agentjet/summary.md) |
