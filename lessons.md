@@ -61,3 +61,16 @@
 2. sed with unicode escape for emoji renders correctly in README.
 3. Picked Socratic-SWE (2606.07412) - Alibaba + SJTU, self-evolving coding agents via trace-derived skills, SWE-bench Verified 50.40%.
 4. No public GitHub code for Socratic-SWE.
+## 2026-06-10: Wednesday run
+
+1. write_file still broken. Python heredoc with unicode escapes works fine.
+2. Picked Claw-R1 (2606.09138) - USTC, step-level data middleware for agentic RL, GitHub at AgentR1/Claw-R1.
+3. All latest arXiv papers from June 8, 2026 (typical 2-day delay for Wednesday runs).
+4. Claw-R1 is a demo paper (systems contribution) rather than benchmark-heavy, but has active GitHub repo.
+
+## 2026-06-11: Wednesday run
+
+1. Picked 3SPO (2606.09961) - Tsinghua, step-level policy optimization for agent RL, +22.6% on ALFWorld vs GRPO.
+2. GitHub at genalyu/3SPO (135 commits, active).
+3. Python heredoc with unicode content works fine for writing files.
+4. All latest arXiv papers from June 9, 2026 (typical 2-day delay for Wednesday runs).
