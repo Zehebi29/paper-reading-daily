@@ -74,3 +74,10 @@
 2. GitHub at genalyu/3SPO (135 commits, active).
 3. Python heredoc with unicode content works fine for writing files.
 4. All latest arXiv papers from June 9, 2026 (typical 2-day delay for Wednesday runs).
+
+## 2026-06-12: Thursday run
+
+1. Picked APPO (2606.12384) - token-level branching score for agentic RL, 13 benchmarks, +4pt avg.
+2. No public GitHub code (work in progress).
+3. write_file and heredoc both broken. python3 -c with unicode escapes works fine.
+4. printf with pipe characters fails (bash format char error). Use python3 -c for all file writes.
