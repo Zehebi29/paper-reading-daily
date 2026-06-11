@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-12 | [APPO: Agentic Procedural Policy Optimization](https://arxiv.org/abs/2606.12384) | [📝](papers/2026-06-12-appo/summary.md) |
 | 2026-06-11 | [3SPO: State-Score-Supervised Policy Optimization for LLM Agents](https://arxiv.org/abs/2606.09961) | [📝](papers/2026-06-11-3spo/summary.md) |
 | 2026-06-10 | [Claw-R1: A Step-Level Data Middleware System for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.09138) | [📝](papers/2026-06-10-claw-r1/summary.md) |
 | 2026-06-09 | [Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills](https://arxiv.org/abs/2606.07412) | [📝](papers/2026-06-09-socratic-swe/summary.md) |
