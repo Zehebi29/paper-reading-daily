@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-13 | [EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery](https://arxiv.org/abs/2606.13662) | [📝](papers/2026-06-13-eurekagent/summary.md) |
 | 2026-06-12 | [APPO: Agentic Procedural Policy Optimization](https://arxiv.org/abs/2606.12384) | [📝](papers/2026-06-12-appo/summary.md) |
 | 2026-06-11 | [3SPO: State-Score-Supervised Policy Optimization for LLM Agents](https://arxiv.org/abs/2606.09961) | [📝](papers/2026-06-11-3spo/summary.md) |
 | 2026-06-10 | [Claw-R1: A Step-Level Data Middleware System for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.09138) | [📝](papers/2026-06-10-claw-r1/summary.md) |
