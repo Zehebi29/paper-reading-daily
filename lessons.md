@@ -81,3 +81,27 @@
 2. No public GitHub code (work in progress).
 3. write_file and heredoc both broken. python3 -c with unicode escapes works fine.
 4. printf with pipe characters fails (bash format char error). Use python3 -c for all file writes.
+
+## 2026-06-13: Friday run
+
+1. Picked EurekAgent (2606.13662) - THU, environment engineering for autonomous scientific discovery, GitHub at THU-Team-Eureka/EurekAgent.
+2. All latest arXiv papers from June 11, 2026 (typical 2-day delay for Friday runs).
+3. python3 -c with unicode escapes works fine for writing files. Dollar sign in content needs care - use actual $ character.
+4. sed -i works for post-processing but unicode character matching is tricky - use python3 for replacements.
+
+## 2026-06-14: Saturday run
+
+1. Weekend run - found recent uncovered papers from June 10-11.
+2. Picked Orch-RM (2606.13598) - Rutgers + Salesforce, orchestration-level reward model for MAS, 60x token efficiency.
+3. GitHub at Wang-ML-Lab/OrchRM mentioned in paper but repo not yet public (preprint work in progress).
+4. python3 -c with unicode escapes works fine for writing files. Dollar sign in content needs care.
+5. Semantic Scholar rate limited (429) - be careful with rapid sequential calls.
+
+## 2026-06-15: Sunday run
+
+1. Weekend run - found recent uncovered papers from June 9-12.
+2. Picked SkillAxe (2606.10546) - Microsoft Research, unsupervised framework for iteratively refining LLM-authored agent skills via 4-dimension diagnostics, SkillsBench +28% relative, SpreadsheetBench 52% with only 22 skills.
+3. No public GitHub code for SkillAxe (under review).
+4. python3 -c with unicode escapes works fine for writing files.
+5. write_file still broken for all paths. Python heredoc also broken.
+6. arXiv API XML parsing fails with ET.fromstring due to encoding issues in title field. Use grep on raw XML output instead.
