@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-15 | [SkillAxe: Sharpening LLM-Authored Agent Skills Through Evaluation-Guided Self-Refinement](https://arxiv.org/abs/2606.10546) | [📝](papers/2026-06-15-skillaxe/summary.md) |
 | 2026-06-14 | [Orch-RM: Reward Modeling for Multi-Agent Orchestration](https://arxiv.org/abs/2606.13598) | [📝](papers/2026-06-14-orchrm/summary.md) |
 | 2026-06-13 | [EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery](https://arxiv.org/abs/2606.13662) | [📝](papers/2026-06-13-eurekagent/summary.md) |
 | 2026-06-12 | [APPO: Agentic Procedural Policy Optimization](https://arxiv.org/abs/2606.12384) | [📝](papers/2026-06-12-appo/summary.md) |
