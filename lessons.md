@@ -105,3 +105,20 @@
 4. python3 -c with unicode escapes works fine for writing files.
 5. write_file still broken for all paths. Python heredoc also broken.
 6. arXiv API XML parsing fails with ET.fromstring due to encoding issues in title field. Use grep on raw XML output instead.
+
+## 2026-06-16: Monday run
+
+1. Picked HarnessX (2606.14249) - RUC AI Box, composable/adaptive/evolvable agent harness foundry, +14.5% avg across 5 benchmarks.
+2. GitHub at Darwin-Agent/HarnessX (already exists, though paper says future release).
+3. Also considered RefGRPO (2606.14211) - closing reflection gap in agentic RL, calibration bonus. No public code.
+4. python3 heredoc works fine for file writing. Unicode in content needs careful handling.
+5. All latest arXiv papers from June 12-13, 2026 (typical 2-3 day delay for Monday runs).
+
+## 2026-06-17: Tuesday run
+
+1. Picked RePro (2606.14302) - SJTU, retrospective progress-aware agent training, WebShop/ALFWorld/Sokoban, up to +17.5% SR gains.
+2. No public GitHub code for RePro.
+3. Key insight: online progress prompting hurts (-8.6%%), retrospective assessment helps (+7.9%%). Forward-then-reflect paradigm.
+4. write_file still broken. python3 -c with unicode content works fine for writing files.
+5. sed -i with append works for adding lines to README, but need to check row ordering (header vs separator).
+6. arXiv API XML parsing still fails with ET.fromstring. Use grep/web_search for paper discovery.
