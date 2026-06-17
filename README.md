@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-18 | [DAC: Divide and Cooperate - Role-Decomposed Multi-Agent LLM Training](https://arxiv.org/abs/2606.10684) | [📝](papers/2026-06-18-dac/summary.md) |
 | 2026-06-17 | [RePro: Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302) | [📝](papers/2026-06-17-repro/summary.md) |
 | 2026-06-16 | [HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry](https://arxiv.org/abs/2606.14249) | [📝](papers/2026-06-16-harnessx/summary.md) |
 | 2026-06-15 | [SkillAxe: Sharpening LLM-Authored Agent Skills Through Evaluation-Guided Self-Refinement](https://arxiv.org/abs/2606.10546) | [📝](papers/2026-06-15-skillaxe/summary.md) |
