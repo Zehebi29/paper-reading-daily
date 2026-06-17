@@ -122,3 +122,12 @@
 4. write_file still broken. python3 -c with unicode content works fine for writing files.
 5. sed -i with append works for adding lines to README, but need to check row ordering (header vs separator).
 6. arXiv API XML parsing still fails with ET.fromstring. Use grep/web_search for paper discovery.
+
+## 2026-06-18: Thursday run
+
+1. Picked DAC (2606.10684) - SNU SKI-ML Lab, role-decomposed multi-agent training for agentic search, LoRA 2.12% beats full FT Search-R1.
+2. No public GitHub code for DAC.
+3. python3 -c with unicode content works fine for writing files.
+4. sed -i with 2a works for inserting rows into README table.
+5. All latest arXiv papers from June 15-16, 2026 (typical 2-day delay for Thursday runs).
+6. Authors: Jaewan Park, Solbee Cho, Jay-Yoon Lee (SNU GSDS).
