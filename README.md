@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-20 | [From Trainee to Trainer: LLM-Designed Training Environment for RL with Multi-Agent Reasoning](https://arxiv.org/abs/2606.17682) | [📝](papers/2026-06-20-trainee-to-trainer/summary.md) |
 | 2026-06-19 | [Q-Evolve: Self-Evolving LLM Agents with In-Distribution Optimization](https://arxiv.org/abs/2606.07367) | [📝](papers/2026-06-19-qevolve/summary.md) |
 | 2026-06-18 | [DAC: Divide and Cooperate - Role-Decomposed Multi-Agent LLM Training](https://arxiv.org/abs/2606.10684) | [📝](papers/2026-06-18-dac/summary.md) |
 | 2026-06-17 | [RePro: Retrospective Progress-Aware Self-Refinement for LLM Agent Training](https://arxiv.org/abs/2606.14302) | [📝](papers/2026-06-17-repro/summary.md) |
