@@ -131,3 +131,29 @@
 4. sed -i with 2a works for inserting rows into README table.
 5. All latest arXiv papers from June 15-16, 2026 (typical 2-day delay for Thursday runs).
 6. Authors: Jaewan Park, Solbee Cho, Jay-Yoon Lee (SNU GSDS).
+
+
+## 2026-06-19: Thursday run
+
+1. Picked Q-Evolve (2606.07367) - ICML 2026, TU Eindhoven + Liverpool + MIT-IBM, in-distribution self-evolving agent RL with weighted IQL + BPPO, ALFWorld/WebShop/SciWorld SOTA, 25x sample efficiency vs QLASS.
+2. No public GitHub code for Q-Evolve (project website at qevolve.github.io, code link placeholder).
+3. write_file still broken. python3 -c with unicode content works fine for writing files.
+4. sed with unicode escape for emoji does NOT render - use python3 to fix post-sed.
+5. All latest arXiv papers from June 16-17, 2026 (typical 2-day delay for Thursday runs).
+
+## 2026-06-20: Saturday run
+
+1. Weekend run - found recent uncovered papers from June 16-17.
+2. Picked Trainee-to-Trainer (2606.17682) - HKUST(GZ) LARK Lab, LLM-as-Environment-Engineer for RL with multi-agent reasoning, Qwen3-4B beats GPT-5.4/Grok-4.2/Gemini-3.1-Pro.
+3. GitHub at LARK-AI-Lab/Trainee-to-Trainer (active, MIT license).
+4. HuggingFace: LARK-Lab/Trainee2Trainer (model) + LARK-Lab/MAPF-FrozenLake-Benchmark (dataset).
+5. python3 -c with unicode content works fine for writing files.
+6. sed with emoji character renders correctly in README.
+
+## 2026-06-21: Saturday run
+
+1. Weekend run - found recent uncovered papers from June 17-20.
+2. Picked EnvRL (2606.17680) - Tsinghua, state prediction + inverse dynamics as auxiliary objectives for agentic RL, ALFWorld +4.6%, WebShop +10.2%, 68.5% training steps.
+3. No public GitHub code for EnvRL.
+4. python3 -c with unicode content works fine for writing files.
+5. sed with emoji character renders correctly in README.
