@@ -157,3 +157,14 @@
 3. No public GitHub code for EnvRL.
 4. python3 -c with unicode content works fine for writing files.
 5. sed with emoji character renders correctly in README.
+
+## 2026-06-22: Monday run
+
+1. Picked SENTINEL (2606.12908) - failure-driven RL for tool-using agents, Controller-Proposer-Solver loop, Tau2-Bench Retail, Qwen3-4B.
+2. No public GitHub code for SENTINEL.
+3. arXiv API returned empty results for this paper (too new?). Used web_extract on HTML version instead.
+4. Semantic Scholar rate-limited (429) for ~30 seconds of consecutive attempts.
+5. web_extract on arxiv abs pages does not capture author names (dynamically rendered). Found authors from X/Twitter post.
+6. python3 -c with unicode content works fine for writing files.
+7. sed with -i and 2a works for inserting rows at top of README table.
+8. Key insight from paper: General RL on strong SFT model causes performance collapse (74.3->68.1), but SENTINEL failure-driven approach improves it (74.3->78.1).
