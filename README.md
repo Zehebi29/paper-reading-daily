@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-22 | [SENTINEL: Failure-Driven Reinforcement Learning for Training Tool-Using Language Model Agents](https://arxiv.org/abs/2606.12908) | [📝](papers/2026-06-22-sentinel/summary.md) |
 | 2026-06-21 | [EnvRL: Learn from Environment Dynamics in Agentic Reinforcement Learning](https://arxiv.org/abs/2606.17680) | [📝](papers/2026-06-21-envrl/summary.md) |
 | 2026-06-20 | [From Trainee to Trainer: LLM-Designed Training Environment for RL with Multi-Agent Reasoning](https://arxiv.org/abs/2606.17682) | [📝](papers/2026-06-20-trainee-to-trainer/summary.md) |
 | 2026-06-19 | [Q-Evolve: Self-Evolving LLM Agents with In-Distribution Optimization](https://arxiv.org/abs/2606.07367) | [📝](papers/2026-06-19-qevolve/summary.md) |
