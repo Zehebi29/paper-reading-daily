@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-24 | [Tmax: A simple recipe for terminal agents](https://arxiv.org/abs/2606.23321) | [📝](papers/2026-06-24-tmax/summary.md) |
 | 2026-06-23 | [Policy and World Modeling Co-Training for Language Agents](https://arxiv.org/abs/2606.02388) | [📝](papers/2026-06-23-paw/summary.md) |
 | 2026-06-22 | [SENTINEL: Failure-Driven Reinforcement Learning for Training Tool-Using Language Model Agents](https://arxiv.org/abs/2606.12908) | [📝](papers/2026-06-22-sentinel/summary.md) |
 | 2026-06-21 | [EnvRL: Learn from Environment Dynamics in Agentic Reinforcement Learning](https://arxiv.org/abs/2606.17680) | [📝](papers/2026-06-21-envrl/summary.md) |
