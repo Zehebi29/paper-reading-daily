@@ -168,3 +168,39 @@
 6. python3 -c with unicode content works fine for writing files.
 7. sed with -i and 2a works for inserting rows at top of README table.
 8. Key insight from paper: General RL on strong SFT model causes performance collapse (74.3->68.1), but SENTINEL failure-driven approach improves it (74.3->78.1).
+
+## 2026-06-23: Monday run
+
+1. Picked PaW (2606.02388) - HKUST, policy and world modeling co-training for language agents, ALFWorld +7.9%, WebShop +8.0%, Llama3.2-3B WebShop 4%->62.2%.
+2. No public GitHub code for PaW.
+3. Authors: Ning Lu, Baijiong Lin, Shengcai Liu, Jiahao Wu, Haoze Lv, Yanbin Wei, Lingting Zhu, Shengju Qian, Xin Wang, Ying-Cong Chen, Qi Wang, Ke Tang.
+4. First author Ning Lu is PhD student at HKUST, previously interned at ByteDance-Seed.
+5. Also considered Connect the Dots (2606.20002) - long-lifecycle agent cross-domain RL, but less experimental data.
+6. python3 heredoc with raw string works fine for writing files with Chinese content.
+7. sed -i with 2a works for inserting rows at top of README table.
+8. All latest arXiv papers from June 18-20, 2026 (typical 2-3 day delay for Monday runs).
+9. pdfinfo works for extracting author metadata from downloaded PDFs.
+
+
+## 2026-06-24: Tuesday run
+
+1. Picked TMAX (2606.23321) - Allen AI + UW, open RL recipe for terminal agents, TMAX-9B 27.2% on Terminal-Bench 2.0.
+2. GitHub at hamishivi/tmax (full open release: data, models, code, CC BY 4.0).
+3. HuggingFace: allenai/TMax-15K (dataset), allenai/tmax-15k-open-instruct.
+4. Authors: Hamish Ivison, Junjie Oscar Yin, Rulin Shao, Teng Xiao, Nathan Lambert, Hannaneh Hajishirzi.
+5. Key technical insight: FP32 LM Head stabilizes training for hybrid models (Qwen 3.5).
+6. DPPO (Divergence PPO) outperforms GRPO for long-horizon agent RL.
+7. python3 -c with escaped percent signs and dollar signs in content needs post-processing sed fix.
+8. sed -i with 3i works for inserting rows at top of README table (line 3 = after header+separator).
+9. All latest arXiv papers from June 21-22, 2026 (typical 2-day delay for Tuesday runs).
+
+
+## 2026-06-25: Wednesday run
+
+1. Picked OpenThoughts-Agent (2606.24855) - Stanford+Berkeley+UT Austin+NYU+UW+etc (50+ researchers), fully open data curation pipeline for agentic models, 100+ ablations, Qwen3-32B 44.8% avg across 7 benchmarks (+3.9pp over Nemotron-Terminal-32B).
+2. GitHub at open-thoughts/OpenThoughts-Agent (active, fully open: training sets, pipeline, models).
+3. Key findings: best model != best teacher (GPT-5.3-Codex worse than GLM-4.7-AWQ), task augmentation via LLM refinement does not help, RL data source choice causes 7.6pp range.
+4. python3 -c with unicode content works fine for writing files.
+5. sed -i with 3i works for inserting rows at top of README table.
+6. All latest arXiv papers from June 22-24, 2026 (typical 1-2 day delay for Wednesday runs).
+7. write_file still broken for app paths.
