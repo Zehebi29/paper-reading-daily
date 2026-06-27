@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-06-28 | [GEOALIGN: Geometric Rollout Curation for Robust LLM Reinforcement Learning](https://arxiv.org/abs/2606.26917) | [📝](papers/2026-06-28-geoalign/summary.md) |
 | 2026-06-25 | [OpenThoughts-Agent: Data Recipes for Agentic Models](https://arxiv.org/abs/2606.24855) | [📝](papers/2026-06-25-openthoughts-agent/summary.md) |
 | 2026-06-24 | [Tmax: A simple recipe for terminal agents](https://arxiv.org/abs/2606.23321) | [📝](papers/2026-06-24-tmax/summary.md) |
 | 2026-06-23 | [Policy and World Modeling Co-Training for Language Agents](https://arxiv.org/abs/2606.02388) | [📝](papers/2026-06-23-paw/summary.md) |
