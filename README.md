@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-01 | [Scaling the Horizon, Not the Parameters: Reaching Trillion-Parameter Performance with a 35B Agent](https://arxiv.org/abs/2606.30616) | [📝](papers/2026-07-01-agents-a1/summary.md) |
 | 2026-06-30 | [Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents](https://arxiv.org/abs/2606.26080) | [📝](papers/2026-06-30-progress-advantage/summary.md) |
 | 2026-06-29 | [OPID: On-Policy Skill Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.26790) | [📝](papers/2026-06-29-opid/) |
 | 2026-06-28 | [GEOALIGN: Geometric Rollout Curation for Robust LLM Reinforcement Learning](https://arxiv.org/abs/2606.26917) | [📝](papers/2026-06-28-geoalign/summary.md) |
