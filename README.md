@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-07 | [The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning](https://arxiv.org/abs/2607.01415) | [📝](papers/2026-07-07-rollout-tax/) |
 | 2026-07-06 | [Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training](https://arxiv.org/abs/2607.01232) | [📝](papers/2026-07-06-is-one-layer-enough/) |
 | 2026-07-05 | [OpenAgent: Can Agents Generalize to the Open World? Unveiling the Fragility of Static Training in Tool Use](https://arxiv.org/abs/2607.01084) | [📝](papers/2026-07-05-openagent/summary.md) |
 | 2026-07-04 | [Agentic Monte Carlo: Simulating Reinforcement Learning for Black-Box Agents](https://arxiv.org/abs/2606.05296) | [📝](papers/2026-07-04-agentic-monte-carlo/summary.md) |
