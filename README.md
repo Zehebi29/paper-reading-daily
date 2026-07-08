@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-09 | [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](https://arxiv.org/abs/2607.05297) | [📝](papers/2026-07-09-MetaSkill-Evolve/) |
 | 2026-07-08 | [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents](https://arxiv.org/abs/2607.05378) | [📝](papers/2026-07-08-CompactionRL/) |
 | 2026-07-07 | [The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning](https://arxiv.org/abs/2607.01415) | [📝](papers/2026-07-07-rollout-tax/) |
 | 2026-07-06 | [Is One Layer Enough? Training A Single Transformer Layer Can Match Full-Parameter RL Training](https://arxiv.org/abs/2607.01232) | [📝](papers/2026-07-06-is-one-layer-enough/) |
