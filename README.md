@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-10 | [Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.07508) | [📝](papers/2026-07-10-sao/) |
 | 2026-07-09 | [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](https://arxiv.org/abs/2607.05297) | [📝](papers/2026-07-09-MetaSkill-Evolve/) |
 | 2026-07-08 | [CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents](https://arxiv.org/abs/2607.05378) | [📝](papers/2026-07-08-CompactionRL/) |
 | 2026-07-07 | [The Rollout Infrastructure Tax in Coding-Agent Reinforcement Learning](https://arxiv.org/abs/2607.01415) | [📝](papers/2026-07-07-rollout-tax/) |
