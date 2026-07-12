@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-13 | [Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning](https://arxiv.org/abs/2607.07690) | [📝](papers/2026-07-13-agon-rl/) |
 | 2026-07-12 | [Learning to Control LLM Agent Harnesses with Offline Reinforcement Learning](https://arxiv.org/abs/2607.05458) | [📝](papers/2026-07-12-harness-rl/) |
 | 2026-07-11 | [PivoARL: Agent Reinforcement Learning via Pivotal-Aware Self-Feedback Retry](https://arxiv.org/abs/2607.03702) | [📝](papers/2026-07-11-pivoarl/) |
 | 2026-07-10 | [Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.07508) | [📝](papers/2026-07-10-sao/) |
