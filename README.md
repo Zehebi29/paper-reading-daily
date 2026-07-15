@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-16 | [SETA: Scaling Environments for Terminal Agents](https://arxiv.org/abs/2607.10891) | [📝](papers/2026-07-16-seta/) |
 | 2026-07-15 | [ScaleCUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL](https://arxiv.org/abs/2607.11185) | [📝](papers/2026-07-15-scalecua/) |
 | 2026-07-14 | [IGRPO: Information Gain-based Rollout Policy Optimization](https://arxiv.org/abs/2607.06223) | [📝](papers/2026-07-14-igrpo/) |
 | 2026-07-13 | [Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning](https://arxiv.org/abs/2607.07690) | [📝](papers/2026-07-13-agon-rl/) |
