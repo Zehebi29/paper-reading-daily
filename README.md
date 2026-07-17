@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-18 | [Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning](https://arxiv.org/abs/2607.14171) | [📝](papers/2026-07-18-bpo/) |
 | 2026-07-17 | [TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents](https://arxiv.org/abs/2607.13988) | [📝](papers/2026-07-17-trace/) |
 | 2026-07-16 | [SETA: Scaling Environments for Terminal Agents](https://arxiv.org/abs/2607.10891) | [📝](papers/2026-07-16-seta/) |
 | 2026-07-15 | [ScaleCUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL](https://arxiv.org/abs/2607.11185) | [📝](papers/2026-07-15-scalecua/) |
