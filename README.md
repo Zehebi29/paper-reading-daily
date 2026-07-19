@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-20 | [Do Agent Optimizers Compound? A Continual-Learning Evaluation on Terminal-Bench 2.0](https://arxiv.org/abs/2607.14004) | [📝](papers/2026-07-20-agent-optimizers-compound/) |
 | 2026-07-19 | [SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.14777) | [📝](papers/2026-07-19-seed/) |
 | 2026-07-18 | [Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning](https://arxiv.org/abs/2607.14171) | [📝](papers/2026-07-18-bpo/) |
 | 2026-07-17 | [TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents](https://arxiv.org/abs/2607.13988) | [📝](papers/2026-07-17-trace/) |
