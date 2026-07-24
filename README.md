@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-25 | [OpenForgeRL: Train Harness-native Agents in Any Environment](https://arxiv.org/abs/2607.21557) | [📝](papers/2026-07-25-openforgerl/) |
 | 2026-07-24 | [RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts](https://arxiv.org/abs/2607.18470) | [📝](papers/2026-07-24-rrpo/) |
 | 2026-07-23 | [Off-Context GRPO: Learning to Reason on Hard Problems using Privileged Information](https://arxiv.org/abs/2607.19313) | [📝](papers/2026-07-23-oc-grpo/) |
 | 2026-07-22 | [Process Reward Informed Tree Rollout for Effective Multi-Turn RL](https://arxiv.org/abs/2607.15610) | [📝](papers/2026-07-22-patr/) |
