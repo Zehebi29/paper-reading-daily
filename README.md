@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-26 | [PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.21419) | [📝](papers/2026-07-26-pats/) |
 | 2026-07-25 | [OpenForgeRL: Train Harness-native Agents in Any Environment](https://arxiv.org/abs/2607.21557) | [📝](papers/2026-07-25-openforgerl/) |
 | 2026-07-24 | [RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts](https://arxiv.org/abs/2607.18470) | [📝](papers/2026-07-24-rrpo/) |
 | 2026-07-23 | [Off-Context GRPO: Learning to Reason on Hard Problems using Privileged Information](https://arxiv.org/abs/2607.19313) | [📝](papers/2026-07-23-oc-grpo/) |
