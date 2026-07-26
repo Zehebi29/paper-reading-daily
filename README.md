@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-07-27 | [G2PO: Group-Graph Policy Optimization for Long-Horizon Agentic Reinforcement Learning](https://arxiv.org/abs/2606.22995) | [📝](papers/2026-07-27-g2po/) |
 | 2026-07-26 | [PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.21419) | [📝](papers/2026-07-26-pats/) |
 | 2026-07-25 | [OpenForgeRL: Train Harness-native Agents in Any Environment](https://arxiv.org/abs/2607.21557) | [📝](papers/2026-07-25-openforgerl/) |
 | 2026-07-24 | [RRPO: Reference-Relative Policy Optimization with Stratified Conditional Rollouts](https://arxiv.org/abs/2607.18470) | [📝](papers/2026-07-24-rrpo/) |
