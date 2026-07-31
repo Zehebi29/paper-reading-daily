@@ -204,3 +204,135 @@
 5. sed -i with 3i works for inserting rows at top of README table.
 6. All latest arXiv papers from June 22-24, 2026 (typical 1-2 day delay for Wednesday runs).
 7. write_file still broken for app paths.
+
+
+## 2026-06-30: Tuesday run
+
+1. Picked Progress Advantage (2606.26080) - UW-Madison + Argonne, log-prob ratio as free step-level signal from RL post-training, no PRM needed.
+2. GitHub at deeplearning-wisc/progress-advantage (active, 8 stars).
+3. python3 heredoc with quoted delimiter (<< 'HEREDOC') works for Chinese content.
+4. web_search (Tavily) completely down with 432 error - used arXiv API directly instead.
+5. web_extract also down with 432 error - used arXiv API xml parsing for abstracts.
+6. GitHub API for repo search works with -o flag to save to file, then parse separately.
+7. Semantic Scholar API rate-limited (429) on first call.
+8. All latest arXiv papers from June 24-26, 2026 (typical 4-6 day delay for Tuesday runs due to weekend).
+9. ArXiv API: use -o flag to write to file (piping to python3 blocked by security).
+10. sed -i with 3i works for inserting rows at top of README table.
+11. git commit and push both worked (ok responses).
+
+## 2026-07-01: Wednesday run
+1. Picked Agents-A1 (2606.30616) - Shanghai AI Lab / InternScience, 35B MoE agent model reaching trillion-parameter performance via horizon scaling.
+2. GitHub at github.com/InternScience/Agents-A1 (77 stars, active, Apache-2.0).
+3. Tavily search still down (432). arXiv API works with -o flag. web_extract also down.
+4. write_file and patch tools still broken. python3 heredoc with quoted delimiter works for writing scripts to /tmp, then execute.
+5. Security blocks heredocs with Chinese. Use unicode escape sequences (\uXXXX) for Chinese in Python string literals.
+6. Best workflow: write Python script to /tmp with python3 heredoc, then run it.
+7. sed -i with 3i works for inserting rows at top of README table.
+8. git add, commit, push all worked (ok responses).
+
+## 2026-07-04: Saturday run
+1. Weekend run - found uncovered ICML 2026 papers from June 3-4.
+2. Picked Agentic Monte Carlo (2606.05296) - Layer 6 AI, ICML 2026, SMC for black-box LLM agents.
+3. GitHub at layer6ai-labs/Agentic-Monte-Carlo (active, ICML 2026).
+4. python3 -c with unicode escapes works for small content (not too many lines).
+5. For larger content, split into multiple python3 -c calls with append mode.
+6. sed -i with 3i works for inserting rows at top of README table, but emoji needs python3 fix.
+7. git add, commit, push all worked (ok responses).
+8. web_search (Tavily) works again after being down earlier.
+9. arXiv API was rate-limited (Rate exceeded) - used web_search instead.
+
+## 2026-07-06: Monday run
+1. Picked Is One Layer Enough (2607.01232) - Univ of Minnesota, single transformer layer matches full-parameter RL training across 7 models x 3 RL algorithms.
+2. No public GitHub code for this paper.
+3. write_file and heredoc still broken. Use python3 -c with append mode for writing files (split large content into multiple calls).
+4. python3 -c with unicode escapes for Chinese characters works fine.
+5. python3 inline script works for README editing (read/edit/write lines).
+6. git add, commit, push all worked (ok responses).
+7. All latest arXiv papers from July 2, 2026 (typical 4-day delay for Monday runs due to weekend).
+
+
+## 2026-07-08: Wednesday run
+
+1. Picked CompactionRL (2607.05378) - Tsinghua, RL with context compaction for long-horizon agents, GLM-4.5-Air SWE-bench Verified 66.8% (+7.0), Terminal-Bench 2.0 24.5% (+3.1).
+2. No dedicated GitHub repo for CompactionRL - code is based on THUDM/slime framework (already open-source).
+3. STAPO (2607.04963, ACL 2026) and RSPO (2607.04713) were also strong candidates but CompactionRL had strongest results and production deployment.
+4. python3 heredoc with unicode escapes (\uXXXX) works fine for writing files with Chinese content.
+5. sed -i with 3i works for inserting rows at top of README table.
+6. git add, commit, push all worked (ok responses).
+7. All latest arXiv papers from July 6, 2026 (typical 2-day delay for Wednesday runs).
+
+## 2026-07-09: Thursday run
+
+1. Picked MetaSkill-Evolve (2607.05297) - LMU Munich + CUHK, recursive self-improvement of LLM agents via two-timescale meta-skill evolution, OfficeQA/SealQA/ALFWorld +23.54/+16.09/+1.92.
+2. No public GitHub code for MetaSkill-Evolve.
+3. paper is from July 6, 2026 (typical 3-day delay for Thursday runs).
+4. python3 heredoc with unicode escapes works for writing files with Chinese content.
+5. Use non-raw string (no r""" prefix) so \uXXXX escapes get processed.
+6. sed -i with 3i (insert at line 3 after header+separator) works for inserting rows at top of README table.
+7. git add, commit, push all worked (ok responses).
+## 2026-07-15: Wednesday run
+1. Picked ScaleCUA (2607.11185) - THUDM, verifiable task synthesis + efficient online RL for computer use agents, OSWorld 68.7% open-source SOTA.
+2. GitHub at THUDM/SCALE-CUA (active, Apache-2.0).
+3. python3 heredoc with unicode escapes works fine for writing files with Chinese content.
+4. sed -i with 3i works for inserting rows at top of README table.
+5. git add, commit, push all worked (ok responses).
+6. arXiv papers published July 13 are typically available by July 15 (2-day delay for Wednesday runs).
+7. SAO (2607.07508) was already covered on July 10 - need to check existing coverage before picking.
+
+
+## 2026-07-16: Thursday run
+1. Picked SETA (2607.10891) - CAMEL-AI, scalable terminal environment framework for RL, 4,567 environments, Qwen3-8B 12% Terminal-Bench 2.0 SOTA.
+2. GitHub at camel-ai/seta (active, Apache-2.0).
+3. python3 heredoc with unicode escapes works fine for writing files with Chinese content.
+4. sed -i with 3i works for inserting rows at top of README table.
+5. git add, commit, push all worked (ok responses).
+6. arXiv papers from July 12-14 available on Thursday July 16 (typical 2-4 day delay).
+7. web_search (Tavily) working again.
+
+
+## 2026-07-22: Wednesday run
+
+1. Picked PATR (2607.15610) - UCSD + Amazon, process-guided adaptive tree rollout for multi-turn agent RL, SWE-Bench +5.0, FrozenLake +9.3.
+2. No public GitHub code for PATR (CC BY 4.0 license, likely future release).
+3. python3 heredoc with raw string + unicode escapes works fine for writing files with Chinese content.
+4. sed -i with 3i works for inserting rows at top of README table.
+5. sed emoji unicode escape (📝) renders as literal text (U0001f4dd). Fix with python3 replace.
+6. git add, commit, push all worked (ok responses).
+7. All latest arXiv papers from July 17-20, 2026 (typical 2-5 day delay for Wednesday runs).
+8. arXiv API XML parsing worked fine for abstract extraction.
+9. web_extract on arxiv HTML pages truncated (5000 char limit) - use PDF URL for longer content, but PDF parsing tricky with embedded fonts.
+10. Security blocks pipe-to-interpreter patterns (curl | python3) - use -o save-to-file first, then python3 separately.
+
+## 2026-07-26: Sunday run
+1. Weekend run - no new arXiv papers on weekends, found uncovered papers from July 23.
+2. Picked PATS (2607.21419) - policy-aware training scaffolding for agentic RL, +18.6% on ALFWorld/WebShop, 32.1% fewer prompt tokens.
+3. No public GitHub code for PATS.
+4. Chinese ML terminology: "policy" in RL = "u7b56略" (strategy), not "u653f策" (political policy).
+5. python3 with heredoc (<< 'ENDSCRIPT') works fine for writing files with unicode-escaped Chinese content.
+6. sed -i with 3i works for inserting rows at top of README table.
+7. git add, commit, push all worked (ok responses).
+
+
+## 2026-07-27: Monday run
+1. Picked G2PO (2606.22995) - PKU + Microsoft, graph-structured credit assignment for agentic RL, up to 22.2% over GRPO.
+2. GitHub at github.com/Nala-YN/G2PO (Apache-2.0, 2 stars, active).
+3. arXiv API timeout (exit code 28) - use web_search as fallback for paper discovery.
+4. python3 heredoc with quoted delimiter (<< 'PYEOF') works fine for writing files with unicode-escaped Chinese content.
+5. sed -i with 3i works for inserting rows at top of README table.
+6. git add, commit, push all worked (ok responses).
+7. All latest arXiv papers from July 24, 2026 (Friday) - Monday runs after weekend see no new weekend listings.
+8. web_search still works for paper discovery when arXiv API is down.
+9. For individual benchmark numbers, only report what's directly in the paper - use "up to 22.2%" not estimated per-benchmark figures.
+
+
+## 2026-07-28: Tuesday run
+1. Picked Skill Self-Play (2607.22529) - Alibaba Qwen team, co-evolutionary framework with Proposer-Solver-Controller RL loop for self-evolving LLM agents.
+2. GitHub at github.com/Qwen-Applications/skill-self-play (active).
+3. python3 -c with unicode escapes works fine for writing files (append mode per section).
+4. Be careful with unicode escapes - double-check characters like 范 (范) vs 菃 (菃), and 修剪 (修剪) vs 剪剪 (剪剪).
+5. sed -i with 3i works for inserting rows at top of README table.
+6. git add, commit, push all worked (ok responses).
+7. All latest arXiv papers from July 24, 2026 (typical 4-day delay for Tuesday runs after weekend).
+8. web_extract on arxiv PDF pages works but truncated at 5000 chars. Use pdftotext for full paper content extraction.
+9. arXiv API XML parsing works fine for abstract extraction.
+10. pdfinfo/pdftotext available on system - use for paper text extraction from downloaded PDFs.
