@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-01 | [Echoverse：用于规模化训练计算机使用智能体的深度演化环境](https://arxiv.org/abs/2607.28074) | [📝](papers/2026-08-01-echoverse/) |
 | 2026-07-31 | [ReCo：针对分布集中问题重新加权 GRPO](https://arxiv.org/abs/2607.26862) | [📝](papers/2026-07-31-reco-grpo/) |
 | 2026-07-30 | [Pass the Baton：轨迹中继的在线策略蒸馏](https://arxiv.org/abs/2607.26057) | [📝](papers/2026-07-30-relay-opd/) |
 | 2026-07-29 | [多轮长程规划背后的机理：从预训练到后训练的单/多教师在线智能体蒸馏](https://arxiv.org/abs/2607.24720) | [📝](papers/2026-07-29-planphys/) |
