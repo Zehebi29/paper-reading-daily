@@ -336,3 +336,36 @@
 8. web_extract on arxiv PDF pages works but truncated at 5000 chars. Use pdftotext for full paper content extraction.
 9. arXiv API XML parsing works fine for abstract extraction.
 10. pdfinfo/pdftotext available on system - use for paper text extraction from downloaded PDFs.
+
+
+## 2026-08-01: Saturday run
+1. Weekend run - no new arXiv papers on weekends, found papers from July 30 (Thursday).
+2. Picked Echoverse (2607.28074) - Microsoft Research, deep/evolving synthetic environments for computer-use agents, 9B model 36.5% -> 67.1% across 14 splits, within 14 pts of GPT-5.4 (80.7%).
+3. GitHub at github.com/microsoft/Echoverse (MIT, 4 commits, 2 stars, active). HF dataset microsoft/Echoverse.
+4. python3 -c with unicode escapes works fine for writing files (append mode per section).
+5. python3 inline script works for README editing (read/edit/write lines, insert at index 2 after header+separator).
+6. git add, commit, push all worked (ok responses).
+7. arXiv API works with -o save + python3 parse (ET.fromstring fine). web_search (Tavily) working.
+8. pdftotext works for full paper extraction from downloaded PDF (7.2MB PDF, 1812 lines).
+
+
+## 2026-08-02: Sunday run
+
+1. Weekend run - no new arXiv papers on weekends, found uncovered papers from July 30.
+2. Picked Harness-G (2607.27652) - NUDT, graph-structured harness for search agents (Select/Lookup/Answer menu + SNC credit), avg F1 beats Graph-R1 by 10.74 (1.5B) and 3.98 (3B) across 6 QA benchmarks.
+3. GitHub at 7HHHHH/Harness-G (MIT, 8 stars, active).
+4. write_file tool still broken for app paths ([rtk: No such file or directory]).
+5. IMPORTANT CHANGE: python3 heredoc with raw Chinese characters now works directly (no \uXXXX escapes needed) - security scan flags confusable unicode but auto-approves.
+6. README insert via python3 read/edit/write lines at index 2 (after header+separator).
+7. git add, commit, push all worked (ok responses).
+8. pdftotext works well for extracting tables/numbers from paper PDFs; verify abstract claims against table numbers (avg F1 50.83-40.09=10.74 ✓).
+
+## 2026-08-04: Tuesday run
+1. Picked TAPO (2607.27973) - OSU + Meta FAIR, transition-aware policy optimization for LLM agents, alternates policy RL (GRPO/GiGPO) with next-observation prediction supervision on shared backbone, zero extra sampling, WebShop/ALFWorld gains (up to +9.4 SR on 1.5B).
+2. No public GitHub - only anonymous.4open.science/r/tapo-neurips2026 review link.
+3. arXiv API rate-limited again ("Rate exceeded.") after ~6 rapid queries - use web_search as fallback for discovery and details.
+4. No 2608.xxxxx papers indexed as of Aug 4 - latest submissions still 07-31.
+5. web_extract on arxiv HTML works well for full paper details (46K chars, saved to cache file).
+6. grep pattern "^| 20" breaks - pipe char is regex alternation; use python or escape \| for checking README rows.
+7. write_file and patch tools still broken for app paths - python3 heredoc with raw Chinese works fine.
+8. Fact check caught wrong "max gain" claim - verify all 8 combinations before stating "largest gain"; highest TAPO-GRPO gain was 1.5B WebShop SR +9.4, not 7B Score +6.3.
