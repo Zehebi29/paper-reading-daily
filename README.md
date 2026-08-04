@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-05 | [CoPES：面向资源受限智能体 LLM 后训练的协同参数子空间进化](https://arxiv.org/abs/2608.02391) | [📝](papers/2026-08-05-copes/) |
 | 2026-08-04 | [TAPO：面向 LLM 智能体的转移感知策略优化](https://arxiv.org/abs/2607.27973) | [📝](papers/2026-08-04-tapo/) |
 | 2026-08-03 | [SkillRise：面向跨任务技能演化的智能体强化学习](https://arxiv.org/abs/2607.26784) | [📝](papers/2026-08-03-skillrise/) |
 | 2026-08-02 | [Harness-G：面向搜索智能体的图结构 Harness](https://arxiv.org/abs/2607.27652) | [📝](papers/2026-08-02-harness-g/) |
