@@ -369,3 +369,34 @@
 6. grep pattern "^| 20" breaks - pipe char is regex alternation; use python or escape \| for checking README rows.
 7. write_file and patch tools still broken for app paths - python3 heredoc with raw Chinese works fine.
 8. Fact check caught wrong "max gain" claim - verify all 8 combinations before stating "largest gain"; highest TAPO-GRPO gain was 1.5B WebShop SR +9.4, not 7B Score +6.3.
+
+
+## 2026-08-05: Wednesday run
+1. Picked CoPES (2608.02391) - SUSTech (Ke Tang group, same as PaW 06-23), cooperative parameter-subspace evolution strategy for resource-constrained agentic LLM post-training, Qwen3.5-4B, recovers 92% of GRPO validation-accuracy gain vs 67% standard ES, memory <1/8 of full GRPO, single 24GB GPU feasible.
+2. GitHub at github.com/MetaronWang/CoPES (0 stars, pushed Aug 3, fresh).
+3. arXiv API worked with -o save + python3 parse. First web_search (Tavily) returned nothing useful - rely on arXiv API directly.
+4. pdftotext -layout needed for clean table alignment - plain pdftotext scrambles multi-column tables.
+5. Verified 92% claim: (88.00-49.20)/(91.47-49.20) = 91.8% consistent.
+6. python3 heredoc with raw Chinese works fine for writing files (auto-approved).
+7. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked (ok responses).
+8. All latest arXiv papers from Aug 3, 2026 batch (2608.xxxxx now indexed, ~2-day delay for Wednesday runs).
+
+## 2026-08-06: Thursday run
+1. Picked TurnSight (2608.04007) - RUC + Baidu, turn-level hindsight self-distillation for TIR, Qwen3-8B avg 42.02 (+7.7% over MatchTIR 39.03), Qwen3-4B 37.51. GitHub at quchangle1/TurnSight (200 OK, active).
+2. arXiv API worked with -o save + python3 parse (first query cat:cs.AI+AND+all:agent, 30 entries, all Aug 4 submissions).
+3. pdftotext -layout works well for extracting result tables with multi-column layouts.
+4. python3 heredoc with raw Chinese works fine (auto-approved, only confusable-unicode warning).
+5. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked (ok responses).
+6. Key insight from paper: tool-result-only privileged context (46.92) beats tool+answer (40.89) and answer-only (42.80) - more privileged info is NOT better for hindsight distillation.
+7. Turn-level aggregation is the most important component (ablation -3.69), more than group norm (-3.27) and multi-teacher selection (-1.30).
+
+
+## 2026-08-08: Saturday run
+1. Weekend run - no new arXiv papers on weekends, latest submissions still Aug 6 (2608.06xxx); ABSeeker from Aug 7 run was 2608.05102, today's batch is newer IDs.
+2. Picked CalibForge (2608.06352) - RUC Gaoling School + AweAI Team, adversarial solver calibration for terminal-task synthesis, 5,431 calibrated tasks, Qwen3.5-35B-A3B 47.57% TB2 (+6.75 over best baseline), 30B +24.71 TB2 / +27.68 SWE-Pro / +30.04 Doc2Repo over base.
+3. GitHub at AweAI-Team/CalibForge (10 stars, pushed Aug 7, fresh). HF dataset AweAI-Team/CalibForge.
+4. arXiv API worked with -o save + python3 parse. web_extract abs pages still don't show abstracts (dynamic rendering) - use API id_list query for abstracts.
+5. pdftotext -layout works well for extracting result tables.
+6. Key insight: solver-relative learnable zone - retention criterion is strong-pass/weak-fail or cross-solver disagreement; only 19% of candidates satisfy contrastive criterion initially, 96% after revision.
+7. python3 heredoc with raw Chinese works fine (auto-approved, confusable-unicode warning only).
+8. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked.
