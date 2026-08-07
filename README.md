@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-08 | [CalibForge：通过对抗性求解器校准规模化可学习终端任务](https://arxiv.org/abs/2608.06352) | [📝](papers/2026-08-08-calibforge/) |
 | 2026-08-07 | [ABSeeker：通过答案回溯信用分配训练长程搜索智能体](https://arxiv.org/abs/2608.05102) | [📝](papers/2026-08-07-abseeker/) |
 | 2026-08-06 | [TurnSight：面向工具集成推理的回合级事后自蒸馏](https://arxiv.org/abs/2608.04007) | [📝](papers/2026-08-06-turnsight/) |
 | 2026-08-05 | [CoPES：面向资源受限智能体 LLM 后训练的协同参数子空间进化](https://arxiv.org/abs/2608.02391) | [📝](papers/2026-08-05-copes/) |
