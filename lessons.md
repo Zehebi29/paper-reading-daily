@@ -400,3 +400,12 @@
 6. Key insight: solver-relative learnable zone - retention criterion is strong-pass/weak-fail or cross-solver disagreement; only 19% of candidates satisfy contrastive criterion initially, 96% after revision.
 7. python3 heredoc with raw Chinese works fine (auto-approved, confusable-unicode warning only).
 8. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked.
+
+## 2026-08-09: Sunday run
+1. Weekend run - no new arXiv papers on weekends, latest submissions still Aug 6 (2608.06xxx); found EnvACE (2608.06197) from Aug 6 batch, newer than CalibForge (2608.06352) covered on Aug 8? No - 2608.06197 < 2608.06352, but both are Aug 6 submissions; picked EnvACE as it has open GitHub (Within-yao/EnvACE) + full benchmark tables.
+2. Picked EnvACE (2608.06197) - SJTU + ZJU + Tencent + CUHK, world rehearsal for agentic RL: policy plays environment role itself, role-wise GRPO, Overall 32.91% beats EnvScaler-8B 31.92% and AWM-14B 32.54%, FinMCP TF1 46.78% best, TTS parallel rehearsal +4.2%.
+3. arXiv API works with -o save + python3 parse. web_extract on arxiv HTML worked (82K chars, saved to cache, read middle via read_file offset).
+4. python3 heredoc with raw Chinese works fine (auto-approved, confusable-unicode warning only).
+5. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked.
+6. Verify README rows with python3 (read lines, print lines[2]) - grep pattern with pipe char unreliable.
+7. Key insight: parameter sharing between act/rehearse roles gives +1.2% (35.5->36.7), world rehearsal vs GRPO +5.5% on tau2-Bench; N=2 rehearsal budget best, N=3 degrades (context length).
