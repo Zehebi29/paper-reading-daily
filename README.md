@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-09 | [EnvACE：通过世界排练内化环境动态的智能体强化学习](https://arxiv.org/abs/2608.06197) | [📝](papers/2026-08-09-envace/) |
 | 2026-08-08 | [CalibForge：通过对抗性求解器校准规模化可学习终端任务](https://arxiv.org/abs/2608.06352) | [📝](papers/2026-08-08-calibforge/) |
 | 2026-08-07 | [ABSeeker：通过答案回溯信用分配训练长程搜索智能体](https://arxiv.org/abs/2608.05102) | [📝](papers/2026-08-07-abseeker/) |
 | 2026-08-06 | [TurnSight：面向工具集成推理的回合级事后自蒸馏](https://arxiv.org/abs/2608.04007) | [📝](papers/2026-08-06-turnsight/) |
