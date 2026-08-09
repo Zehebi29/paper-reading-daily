@@ -409,3 +409,14 @@
 5. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked.
 6. Verify README rows with python3 (read lines, print lines[2]) - grep pattern with pipe char unreliable.
 7. Key insight: parameter sharing between act/rehearse roles gives +1.2% (35.5->36.7), world rehearsal vs GRPO +5.5% on tau2-Bench; N=2 rehearsal budget best, N=3 degrades (context length).
+
+
+## 2026-08-10: Monday run
+1. arXiv still frozen at Aug 6 batch (2608.06xxx) - no Aug 7+ submissions visible even on Monday Aug 10.
+2. Picked AgentOPSD (2608.05987) - Tsinghua + ZJU + Meituan, recursive Bayesian turn-level credit assignment for agentic RL, ALFWorld Qwen2.5-7B 89.1% (GRPO 81.2), horizon robustness -0.54 pts/turn vs GRPO -2.91.
+3. GitHub at ZethWang/AgentOPSD (19 stars, pushed Aug 7, active).
+4. Candidates checked: CIPO (gxingyu/cipo, 3 stars), TrajDebug (THU-KEG/TrajDebug, 2 stars), GSE (no GitHub found).
+5. python3 heredoc with raw Chinese works fine (confusable-unicode warning only, auto-approved).
+6. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked (ok responses).
+7. Key fact check: WebShop Acc 7B - SDAR (82.8) beats AgentOPSD (79.7); only Score is best. Don't claim "all metrics best".
+8. Noted in limitations: relies on external SkillBank (SkillRL) privileged skills during training.
