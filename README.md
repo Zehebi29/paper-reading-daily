@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-10 | [AgentOPSD：面向智能体强化学习的递归自蒸馏信用分配](https://arxiv.org/abs/2608.05987) | [📝](papers/2026-08-10-agentopsd/) |
 | 2026-08-09 | [EnvACE：通过世界排练内化环境动态的智能体强化学习](https://arxiv.org/abs/2608.06197) | [📝](papers/2026-08-09-envace/) |
 | 2026-08-08 | [CalibForge：通过对抗性求解器校准规模化可学习终端任务](https://arxiv.org/abs/2608.06352) | [📝](papers/2026-08-08-calibforge/) |
 | 2026-08-07 | [ABSeeker：通过答案回溯信用分配训练长程搜索智能体](https://arxiv.org/abs/2608.05102) | [📝](papers/2026-08-07-abseeker/) |
