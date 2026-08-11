@@ -420,3 +420,21 @@
 6. README insert via python3 read/edit/write lines at index 2. git add, commit, push all worked (ok responses).
 7. Key fact check: WebShop Acc 7B - SDAR (82.8) beats AgentOPSD (79.7); only Score is best. Don't claim "all metrics best".
 8. Noted in limitations: relies on external SkillBank (SkillRL) privileged skills during training.
+
+## 2026-08-11: Tuesday run
+1. arXiv unfroze - Aug 7 batch (2608.07xxx) finally visible on Tuesday Aug 11; Aug 8+ submissions still not indexed.
+2. Picked SkillProx (2608.07449) - HKUST + Macau University, proximal-gradient-inspired forward-backward self-evolving agent skills, closed-loop diagnosis + leave-one-out utility audit, +3.0pp avg over strongest gradient-based baseline, 3 backbones x 3 benchmarks (SpreadsheetBench Verified IID / WikiTQ / HiTab OOD).
+3. GitHub at Steven011018/SkillProx exists but is placeholder only (README says code available soon) - only candidate with any GitHub link this batch.
+4. Fact-check caught bold errors: Qwen3.5-27B HiTab 78.5 is NOT best (Human/EvoSkill 78.7 higher); Qwen3.6-27B WikiTQ 86.2 NOT best (EvoSkill 87.7). Always verify per-cell bold against full table, not just the paper's narrative claims.
+5. Don't name "strongest gradient-based baseline" as SkillGrad - abstract says gradient-based, main text says SkillGrad is strongest self-evolving baseline; keep as-is unless paper explicitly equates them.
+6. GitHub API search with & in query needs URL encoding or fails; separate curl calls with -o save + python3 parse work.
+7. python3 heredoc with raw Chinese works fine (confusable-unicode warning only, auto-approved). git add/commit/push all ok.
+
+## 2026-08-12: Wednesday run
+1. arXiv latest batch is Aug 10 (2608.09xxx) - no Aug 11+ submissions indexed yet on Wednesday Aug 12.
+2. Picked SHE (2608.09885) - Shanghai AI Lab AgentDoG + Fudan + SJTU + HKUST, trajectory-driven safety harness evolution, 4 decoupled artifacts (System Prompt/Rule Bank/Safety Memory/Tool Policy), Agent-SafetyBench ASR 8.6%->5.5%, 3.1x lower than static SafeHarness (17.1%), transfers to unseen AgentHarm risks and across 3 models (Kimi K2.6/GLM-5.2/MiniMax M2.7).
+3. GitHub at RainbowQTT/SHE (Apache-2.0, 4 stars, pushed Aug 4). Chose SHE over BCSD (2608.09555, Fudan+ZJU+ECNU+Alibaba, bidirectional context self-distillation for skill-based agent RL) because BCSD has NO public GitHub - pipeline prioritizes papers with open code.
+4. Xi Lin in SHE author list is SJTU (not Donghua) - checked affiliation before assuming any DHU connection.
+5. arXiv submittedDate range query needs URL-encoded brackets %5B %5D or curl fails with exit 3.
+6. python3 heredoc with raw Chinese works fine (confusable-unicode warning only, auto-approved). git add/commit/push all ok.
+7. Two strong candidates same batch: SHE (safety harness, open code) vs BCSD (skill RL, richer per-benchmark tables but no code). Open code won per pipeline criteria.
