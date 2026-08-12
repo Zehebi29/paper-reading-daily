@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-13 | [SKILLER：面向小语言模型的可复用技能提取语言级强化学习](https://arxiv.org/abs/2608.10538) | [📝](papers/2026-08-13-skiller/) |
 | 2026-08-12 | [SHE：面向 LLM 智能体的轨迹驱动安全 Harness 演化](https://arxiv.org/abs/2608.09885) | [📝](papers/2026-08-12-she/) |
 | 2026-08-11 | [SkillProx：通过近端文本梯度下降实现自进化智能体技能](https://arxiv.org/abs/2608.07449) | [📝](papers/2026-08-11-skillprox/) |
 | 2026-08-10 | [AgentOPSD：面向智能体强化学习的递归自蒸馏信用分配](https://arxiv.org/abs/2608.05987) | [📝](papers/2026-08-10-agentopsd/) |
