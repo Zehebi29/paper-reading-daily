@@ -438,3 +438,11 @@
 5. arXiv submittedDate range query needs URL-encoded brackets %5B %5D or curl fails with exit 3.
 6. python3 heredoc with raw Chinese works fine (confusable-unicode warning only, auto-approved). git add/commit/push all ok.
 7. Two strong candidates same batch: SHE (safety harness, open code) vs BCSD (skill RL, richer per-benchmark tables but no code). Open code won per pipeline criteria.
+
+## 2026-08-13: Thursday run
+1. Picked SKILLER (2608.10538) - SJTU + Shanghai AI Lab + HIT(SZ) + Tsinghua SZ, language-level RL for reusable skill extraction in small LMs, skills-as-policy (frontier model actor/critic, small-model agent loop as env, all RL signals via natural language, no weight updates), Qwen3.5-9B/4B, 5 benchmarks (SkillsBench 73.91 / SkillLearnBench 32.11 / SWE-Skills-Bench 82.80 / GAIA 49.40 / EarthBench 76.08), 4B SWE 66.70 beats 9B+Manus 62.40, cost $8.95 per skill vs SkillX $14.55, 167x cheaper deployment.
+2. GitHub at DANG-ai/SKILLER (official, pushed Aug 12, fresh).
+3. arXiv API 503 on first id_list query - retry with sleep works.
+4. Fact-check: abstract claims 1.8-13.3pp gains for 4B but SkillsBench (42.03 vs SkillX 43.48) and GAIA (43.78 vs 44.18) 4B does NOT beat SkillX - adjusted one-liner to say "relative gains" not "outperforms all baselines".
+5. python3 heredoc with raw Chinese works fine (confusable-unicode warning only, auto-approved). patch/write_file tools still broken for app paths.
+6. README insert via python3 read/edit/write lines at index 2. git add/commit/push all ok.
