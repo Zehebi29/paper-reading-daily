@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-14 | [模拟器坍缩：单一冻结模拟器不足以支撑多智能体强化学习](https://arxiv.org/abs/2608.12253) | [📝](papers/2026-08-14-simulator-collapse/) |
 | 2026-08-13 | [SKILLER：面向小语言模型的可复用技能提取语言级强化学习](https://arxiv.org/abs/2608.10538) | [📝](papers/2026-08-13-skiller/) |
 | 2026-08-12 | [SHE：面向 LLM 智能体的轨迹驱动安全 Harness 演化](https://arxiv.org/abs/2608.09885) | [📝](papers/2026-08-12-she/) |
 | 2026-08-11 | [SkillProx：通过近端文本梯度下降实现自进化智能体技能](https://arxiv.org/abs/2608.07449) | [📝](papers/2026-08-11-skillprox/) |
