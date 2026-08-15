@@ -446,3 +446,13 @@
 4. Fact-check: abstract claims 1.8-13.3pp gains for 4B but SkillsBench (42.03 vs SkillX 43.48) and GAIA (43.78 vs 44.18) 4B does NOT beat SkillX - adjusted one-liner to say "relative gains" not "outperforms all baselines".
 5. python3 heredoc with raw Chinese works fine (confusable-unicode warning only, auto-approved). patch/write_file tools still broken for app paths.
 6. README insert via python3 read/edit/write lines at index 2. git add/commit/push all ok.
+
+
+## 2026-08-16: Sunday run
+1. Weekend run - latest arXiv batch is Aug 13 (2608.12851-2608.13560); AutoDesign (2608.13560) already covered Aug 15, so pick from same batch.
+2. Picked SkillMisevo (2608.12851) - CityU HK + Adelaide, "Practice Makes Unsafe": skill misevolution in self-improving LLM agents, 4 frameworks (Claude Code/Codex/Hermes/OpenClaw) x 6 evolution methods, 525 tasks x 25 episodes per condition, SafeEvolve cuts URR 35.33->8.67 and C-ASR 21.33->4.00 with only -0.4 BU.
+3. GitHub at henrymao2004/misevolve (official, Python, pushed Aug 8, no license).
+4. Candidates rejected: SkillEvo (2608.13120, Tencent, no GitHub link in paper), CrEST (2608.13179, only github.com/openclaw/openclaw is a related-work ref - HTML 404, used PDF), SkillShapley (2608.13173, no code mentioned).
+5. arXiv HTML pages work for full paper text (saved to cache, read middle via read_file offset). PDF first page gives author affiliations (pdftotext) - Xutao Mao @ CityU HK.
+6. python3 heredoc with raw Chinese works fine (confusable-unicode warning, auto-approved). README insert via python3 at index 2. git add/commit/push all ok.
+7. git log works but piping to cat fails with rtk error - run git commands without pipes.

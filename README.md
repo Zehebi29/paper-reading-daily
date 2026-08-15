@@ -1,5 +1,6 @@
 | Date | Paper | Notes |
 |:----:|:----|:----:|
+| 2026-08-16 | [熟能生危：自改进 LLM 智能体中的技能误进化](https://arxiv.org/abs/2608.12851) | [📝](papers/2026-08-16-skill-misevolution/) |
 | 2026-08-15 | [AutoDesign：面向长程智能体设计的元 Harness 优化](https://arxiv.org/abs/2608.13560) | [📝](papers/2026-08-15-autodesign/) |
 | 2026-08-14 | [模拟器坍缩：单一冻结模拟器不足以支撑多智能体强化学习](https://arxiv.org/abs/2608.12253) | [📝](papers/2026-08-14-simulator-collapse/) |
 | 2026-08-13 | [SKILLER：面向小语言模型的可复用技能提取语言级强化学习](https://arxiv.org/abs/2608.10538) | [📝](papers/2026-08-13-skiller/) |
