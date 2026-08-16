@@ -456,3 +456,10 @@
 5. arXiv HTML pages work for full paper text (saved to cache, read middle via read_file offset). PDF first page gives author affiliations (pdftotext) - Xutao Mao @ CityU HK.
 6. python3 heredoc with raw Chinese works fine (confusable-unicode warning, auto-approved). README insert via python3 at index 2. git add/commit/push all ok.
 7. git log works but piping to cat fails with rtk error - run git commands without pipes.
+
+## 2026-08-17: Monday run
+1. arXiv API submittedDate range query shows no Aug 14+ submissions, but web list (arxiv.org/list/cs.AI/recent) shows Fri 14 Aug 2026 announcement batch (204 entries, IDs 2608.12847-2608.13561, submittedDate Aug 13). API index lags the web listing - always check the recent list page.
+2. Picked SSPO (2608.12764) - HKUST + Huawei, step-level self-distilled policy optimization for deep search agents: Evidence Anchors (6,000+ QA pairs, avg 5.24/question) as privileged info + teacher-student disagreement as step-level advantage weights in GRPO (only incorrect trajectories), Qwen3-8B avg 46.0 vs GRPO 43.6, 100 steps beats GRPO 200 steps, +5% overhead.
+3. GitHub at hkust-nlp/SSPO (MIT, pushed Aug 14, active). Best candidate this batch: CrEST (2608.13179) was rejected Aug 16 (no code), SkillEvo (2608.13120) no GitHub, SkillShapley (2608.13173) no code.
+4. Key insight: direct OPSD distillation collapses tool use (11.8 < GRPO 12.8, 30.9 turns), token-level weighting no gain (11.8), step-level weighting wins (14.5) - granularity must match the search-action unit.
+5. python3 heredoc with raw Chinese works fine (confusable-unicode warning, auto-approved). README insert via python3 at index 2. git add/commit/push all ok.
